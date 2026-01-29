@@ -28,14 +28,14 @@ public class Patient implements Comparable<Patient>{
         this.priority = priority;
         this.vip = vip;
         this.id = generateRandomString(randomStringLength);
-        this.setcreatedTime(LocalTime.now());
+        this.setCreatedTime(LocalTime.now());
     }
 
-    public LocalTime getcreatedTime(){
+    public LocalTime getCreatedTime(){
         return this.createdTime;
     }
 
-    public void setcreatedTime(LocalTime createdTime){
+    public void setCreatedTime(LocalTime createdTime){
         this.createdTime = createdTime;
     }
 
@@ -93,7 +93,7 @@ public class Patient implements Comparable<Patient>{
             return true;
         }
         Patient p = (Patient) o;
-        if(p.getcreatedTime() != this.getcreatedTime())return false;
+        if(p.getCreatedTime() != this.getCreatedTime())return false;
         if(p.getPriority() != this.getPriority()) return false;
         if(p.getId() != this.getId()) return false;
         if(p.isVip() != this.isVip()) return false;
