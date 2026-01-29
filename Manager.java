@@ -1,6 +1,13 @@
 public class Manager <T extends Comparable<T>>{
     private Heap<T> priority;
     private Queue<T> order;
+
+    /**
+     * This is a class for Doctors.
+     * You can add your patients to the system using - add(T t)
+     * You can get patient by entry time - getByCreationTime(T t) or
+     * you can get patient by priority - getByPriority(T t)
+     */
     public Manager(){
         this.priority=new Heap<>();
         this.order=new Queue<>();
